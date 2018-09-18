@@ -1,0 +1,16 @@
+<Composition>
+	<Connector>
+		<Id>1469135991334</Id>
+		<Sender>1469135991334</Sender>
+		<Receiver>1469139334492</Receiver>
+		<Transistion>Λ1</Transistion>
+	</Connector>
+	<Connector>
+		<Id>1469135991335</Id>
+		<Sender>1469139334492</Sender>
+		<Receiver>1469135991334</Receiver>
+		<Transistion>Λ1</Transistion>
+	</Connector>
+</Composition>
+
+
