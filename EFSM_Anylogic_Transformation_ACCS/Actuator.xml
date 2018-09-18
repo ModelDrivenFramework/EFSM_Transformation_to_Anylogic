@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+                          <!--   =========   Component ========  -->
+		<Component>
+			<Id>1492973992017</Id>
+			<Name>Actuator</Name>
+			<Description>It accelerates or decelerates the speed of car as per instructions of controller.</Description>
+			<OutputVariable>
+					<Id>1521747098446</Id>
+					<Name>speed</Name>
+					<Properties Type="double" Value="27.7778"></Properties>
+			</OutputVariable>
+			<State>
+					<Id>1492974222060</Id>
+					<Name>fixSpeed</Name>
+					<Initial>true</Initial>
+			</State>
+			<State>
+					<Id>1492974222062</Id>
+					<Name>Pedal</Name>
+					<Initial/>
+			</State>
+			<State>
+					<Id>1492974222066</Id>
+					<Name>Brake</Name>
+					<Initial>false</Initial>
+			</State>
+			<Transition>
+					<Id>1492974202138</Id>
+					<Name>Λ1</Name>
+					<Properties Source="1492974222060" Target="1492974222062" Type="Receive">
+						<Guard></Guard>
+						<Event>pedal</Event>
+						<Action></Action>
+						<TimeFunction/>		
+					</Properties>	
+			</Transition>
+			<Transition>
+					<Id>1492974222074</Id>
+					<Name>Λ2</Name>
+					<Properties Source="1492974222062" Target="1492974222060" Type="Send">
+						<Guard></Guard>
+						<Event></Event>
+						<Action>speed = speed + 0.5</Action>
+						<TimeFunction Type="Wait" Value="0" Unit="SECOND"/>			
+					</Properties>	
+			</Transition>
+			<Transition>
+					<Id>1492974222080</Id>
+					<Name>Λ3</Name>
+					<Properties Source="1492974222066" Target="1492974222060" Type="Receive">
+						<Guard></Guard>
+						<Event>brake</Event>
+						<Action></Action>
+						<TimeFunction/>				
+					</Properties>	
+			</Transition>	
+			<Transition>
+					<Id>1492974222082</Id>
+					<Name>Λ4</Name>
+					<Properties Source="1492974222060" Target="1492974222066" Type="Send">
+						<Guard></Guard>
+						<Event></Event>
+						<Action>speed = speed - 0.5</Action>
+						<TimeFunction Type="Wait" Value="0" Unit="SECOND"/>			
+					</Properties>	
+			</Transition>			
+		</Component>
+		
+	
+	
+	
+	
