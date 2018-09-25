@@ -10,7 +10,7 @@
 <tr>
 <td width="573">
 <ul>
-<li><strong>Id: </strong>The id of connector. It is a unique 13 digit integer value.</li>
+<li><strong>Id: </strong>The id of the Base Component. It is a unique 13 digit integer value.</li>
 <li><strong>Name: </strong>The name of the Base Component.</li>
 <li><strong>Description: </strong>The small text description to define the functionality of the component.</li>
 <li><strong>Input Variables: </strong>provides values to an action when it is triggered.</li>
