@@ -121,5 +121,5 @@
 <li>Download Source Code.</li>
 <li>Open it using any Net Beans.</li>
 <li>Run the File</li>
-<li>Provide EFSM XML file parameters like: <em>xml,PlayerB.xml,Composition.xml</em></li>
+<li>Provide EFSM XML file parameters like: <em>PlayerA.xml,PlayerB.xml,Composition.xml</em></li>
 </ol>
