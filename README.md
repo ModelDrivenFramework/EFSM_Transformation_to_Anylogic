@@ -1,5 +1,5 @@
 <p><strong>EFSM XML Transformation to Anylogic:</strong></p>
-<p>There are two types of XML files provided to Transformation Tool:</p>
+<p>There are two types of XML provided to Transformation Tool:</p>
 <ol>
 <li>Base Component XML</li>
 <li>Composed Model XML</li>
@@ -42,7 +42,6 @@
 </ul>
 <p><strong>&nbsp;</strong></p>
 <ul>
-<ul>
 <li><strong>State: </strong>represents a location of control with a particular set of reactions to conditions and/or events.</li>
 <li><strong>State Properties:</strong>
 <ul>
@@ -51,7 +50,6 @@
 <li><strong>Initialize: </strong>It defines either the State is initial or not. It has a Boolean type values i.e. true or false. In case of true it considers as an initial state.</li>
 </ul>
 </li>
-</ul>
 </ul>
 <p><strong>&nbsp;</strong></p>
 <ul>
@@ -110,11 +108,11 @@
 <p>We have provided a Player Example to understand the transformation work. Suppose there are two players Player A and Player B. They are sending and receiving messages from each other via connected ports.</p>
 <p>There would be three files required to make this model work:</p>
 <ol>
-<li>Base Component File (<strong>xml, PlayerB.xml</strong>):</li>
+<li>Base Component File (<strong>PlayerA.xml, PlayerB.xml</strong>):</li>
 </ol>
 <p style="padding-left: 60px;">&nbsp;These two files have input, output variables, state and transition details.</p>
 <ol start="2">
-<li>Composed Model File (<strong>xml</strong>): It has sender, receiver, transition and connector details.</li>
+<li>Composed Model File (<strong>Composition.xml</strong>): It has sender, receiver, transition and connector details.</li>
 </ol>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
