@@ -1,5 +1,5 @@
 <p><strong>EFSM XML Transformation to Anylogic:</strong></p>
-<p>There are two types of XML provided to Transformation Tool:</p>
+<p>There are two types of XML files provided to Transformation Tool:</p>
 <ol>
 <li>Base Component XML</li>
 <li>Composed Model XML</li>
