@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<Components>
+	   <!--   =========   Component ========  -->
+		<Component>
+			<Id>1469139334492</Id>
+			<Name>PlayerB</Name>
+			<Description>It is Player B</Description>
+		    <InputVariable>
+					<Id>1521747098446</Id>
+					<Name>a</Name>
+					<Properties Type="int" Value="1"></Properties>
+			</InputVariable>
+			<OutputVariable>
+					<Id>1521747098447</Id>
+					<Name>b</Name>
+					<Properties Type="int" Value="3"></Properties>
+			</OutputVariable>			
+			<State>
+					<Id>1469139334509</Id>
+					<Name>Send</Name>
+					<Initial>false</Initial>
+			</State>
+				<State>
+					<Id>1469139334511</Id>
+					<Name>Wait</Name>
+					<Initial>true</Initial>
+				</State>
+				<Transition>
+					<Id>1469139334517</Id>
+					<Name>Λ1</Name>
+					<Properties Source="1469139334511" Target="1469139334509" Type="Receive">
+						<Guard></Guard>
+						<Event>Ping</Event>
+						<Action></Action>
+						<TimeFunction></TimeFunction>
+					</Properties>	
+				</Transition>
+				<Transition>
+					<Id>1469139334515</Id>
+					<Name>Λ2</Name>
+					<Properties Source="1469139334509" Target="1469139334511" Type="Send">
+						<Guard>b > a</Guard>
+						<Event>Pong</Event>
+						<Action></Action>
+						<TimeFunction Type="Wait" Value="1" Unit="SECOND"/>
+				    </Properties>	
+				</Transition>
+				
+				
+		</Component>
+	</Components>
+	
