@@ -1,9 +1,6 @@
-<p><strong>EFSM XML Transformation to Anylogic:</strong></p>
-<p>There are two types of XML provided to Transformation Tool:</p>
-<ol>
-<li>Base Component XML</li>
-<li>Composed Model XML</li>
-</ol>
+## EFSM XML Transformation to Anylogic:
+There are two types of XML provided to Transformation Tool:
+![efsm](https://user-images.githubusercontent.com/43378781/46250765-354b5e80-c45b-11e8-8e2d-adc9f5a9b716.png)
 <p><strong>Base Component XML: </strong>It is the xml of an independent component. Each base component has following:</p>
 <table>
 <tbody>
