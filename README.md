@@ -3,7 +3,8 @@ There are two types of XML provided to Transformation Tool:
 ![efsm](https://user-images.githubusercontent.com/43378781/46250765-354b5e80-c45b-11e8-8e2d-adc9f5a9b716.png)
 
 
-**Base Component XML:** It is the xml of an independent component. Each base component has following:
+### Base Component XML: 
+It is the xml of an independent component. Each base component has following:
 
 - **Id:** The id of the Base Component. It is a unique 13 digit integer value.
 - **Name:** The name of the Base Component.
@@ -47,14 +48,15 @@ There are two types of XML provided to Transformation Tool:
       - **Value:** It stores the integer type time value.
       - **Unit:** It defines the unit of time in milliseconds, seconds, minute, hour. ** **
 
-**Composed Model XML:** It is the xml of composed components in model, schema of Composed Model is as follows:
+### Composed Model XML:
+It is the xml of composed components in model, schema of Composed Model is as follows:
 
 - **Id:** The id of connector. It is a unique 13 digit integer value.
 - **Transition:** The name of Transition which is a source of connection between components.
 - **Sender:** The id of Sender connector.
 - **Receiver:** The id of Receiver connector.
 
-**Player&#39;s Example:**
+### Player&#39;s Example:
 
 We have provided a Player Example to understand the transformation work. Suppose there are two players Player A and Player B. They are sending and receiving messages from each other via connected ports.
 
@@ -65,7 +67,7 @@ There would be three files required to make this model work:
 2. Composed Model File ( **Composition.xml** ): It has sender, receiver, transition and connector details.
 
 
-**How to Run:**
+### How to Run:
 
 1. Download Source Code.
 2. Run the File and provide EFSM XML file names along their paths: _PlayerA.xml,PlayerB.xml,Composition.xml_
