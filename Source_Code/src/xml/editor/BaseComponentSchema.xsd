@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Component">
+    <xs:annotation>
+      <xs:documentation>=========   Component ========</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:long" name="Id"/>
+        <xs:element type="xs:string" name="Name"/>
+        <xs:element type="xs:string" name="Description"/>
+        <xs:element name="InputVariable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:long" name="Id"/>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element name="Properties">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="Type"/>
+                      <xs:attribute type="xs:byte" name="Value"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OutputVariable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:long" name="Id"/>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element name="Properties">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="Type"/>
+                      <xs:attribute type="xs:byte" name="Value"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="State" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:long" name="Id"/>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element type="xs:string" name="Initial"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Transition" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:long" name="Id"/>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element name="Properties">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Guard"/>
+                    <xs:element type="xs:string" name="Event"/>
+                    <xs:element type="xs:string" name="Action"/>
+                    <xs:element name="TimeFunction">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="Type" use="optional"/>
+                            <xs:attribute type="xs:byte" name="Value" use="optional"/>
+                            <xs:attribute type="xs:string" name="Unit" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:long" name="Source" use="optional"/>
+                  <xs:attribute type="xs:long" name="Target" use="optional"/>
+                  <xs:attribute type="xs:string" name="Type" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
