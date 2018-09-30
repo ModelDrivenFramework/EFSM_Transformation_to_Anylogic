@@ -1,6 +1,8 @@
 ## EFSM XML Transformation to Anylogic:
 There are two types of XML provided to Transformation Tool:
 ![efsm](https://user-images.githubusercontent.com/43378781/46250765-354b5e80-c45b-11e8-8e2d-adc9f5a9b716.png)
+
+
 **Base Component XML:** It is the xml of an independent component. Each base component has following:
 
 - **Id:** The id of the Base Component. It is a unique 13 digit integer value.
